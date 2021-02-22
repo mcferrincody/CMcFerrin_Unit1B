@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 15.0f;
-    public float turnSpeed = 15.0f;
+    private float speed = 15.0f;
+    private float turnSpeed = 15.0f;
 
     private float horizontalInput;
     private float verticalInput;
@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
         Debug.Log(Time.deltaTime);
 
         transform.Translate(Vector3.forward * Time.deltaTime * speed * verticalInput);
-
+        //comment for the point xP This makes car go vroom vroom (move forward)
         transform.Rotate(Vector3.up, Time.deltaTime * turnSpeed * horizontalInput);
     }
 }
